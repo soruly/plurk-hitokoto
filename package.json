@@ -4,7 +4,9 @@
   "description": "Post quotes from hitokoto to plurk",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "prettier --check \"**/*.js\"",
+    "test": "prettier --check \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
     "node-fetch": "^2.6.0",
     "opencc": "^1.0.5",
     "plurk2": "^0.5.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
   }
 }
