@@ -1,5 +1,9 @@
 # plurk-hitokoto
 
+[![Build Status](https://travis-ci.org/soruly/plurk-hitokoto.svg?branch=master)](https://travis-ci.org/soruly/plurk-hitokoto)
+[![Dependencies](https://david-dm.org/soruly/plurk-hitokoto/status.svg)](https://david-dm.org/soruly/plurk-hitokoto)
+[![license](https://img.shields.io/github/license/soruly/plurk-hitokoto.svg)](https://raw.githubusercontent.com/soruly/plurk-hitokoto/master/LICENSE)
+
 Post quotes from [hitokoto (一言)](https://hitokoto.cn) to plurk (噗浪)
 
 ## Usage
