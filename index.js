@@ -21,9 +21,9 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
     console.log(`Please authorize this app in ${authPage}`);
     const rl = readline.createInterface({
       input: process.stdin,
-      output: process.stdout
+      output: process.stdout,
     });
-    const code = await new Promise(resolve =>
+    const code = await new Promise((resolve) =>
       rl.question("Enter verification code: ", resolve)
     );
     rl.close();
@@ -34,7 +34,7 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
       [
         fs.readFileSync(".env", "utf8"),
         `TOKEN=${client.token}`,
-        `TOKEN_SECRET=${client.tokenSecret}`
+        `TOKEN_SECRET=${client.tokenSecret}`,
       ].join("\n")
     );
     const me = await client.request("Users/me");
@@ -47,18 +47,18 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
     TOKEN,
     TOKEN_SECRET
   );
-  const hitokoto = await fetch("https://v1.hitokoto.cn").then(res =>
+  const hitokoto = await fetch("https://v1.hitokoto.cn").then((res) =>
     res.json()
   );
   const plurk = await client.request("Timeline/plurkAdd", {
     content: opencc.convertSync(
       `${hitokoto.hitokoto} [emo76]\n -- ${hitokoto.from}`
     ),
-    qualifier: ":"
+    qualifier: ":",
   });
   await client.request("Responses/responseAdd", {
     plurk_id: plurk.plurk_id,
     content: `https://hitokoto.cn/?id=${hitokoto.id}`,
-    qualifier: ":"
+    qualifier: ":",
   });
 })();
