@@ -19,7 +19,7 @@
     "dotenv": "^8.2.0",
     "fs-extra": "^9.0.0",
     "node-fetch": "^2.6.0",
-    "opencc": "^1.0.5",
+    "opencc": "^1.0.6",
     "plurk2": "^0.5.2"
   },
   "devDependencies": {
