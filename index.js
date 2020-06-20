@@ -23,9 +23,7 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
       input: process.stdin,
       output: process.stdout,
     });
-    const code = await new Promise((resolve) =>
-      rl.question("Enter verification code: ", resolve)
-    );
+    const code = await new Promise((resolve) => rl.question("Enter verification code: ", resolve));
     rl.close();
     await client.getAccessToken(code);
     console.log("Saving token in .env...");
@@ -41,19 +39,10 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
     console.log(`Welcome ${me.display_name}`);
     process.exit();
   }
-  const client = new PlurkClient(
-    CONSUMER_KEY,
-    CONSUMER_SECRET,
-    TOKEN,
-    TOKEN_SECRET
-  );
-  const hitokoto = await fetch("https://v1.hitokoto.cn").then((res) =>
-    res.json()
-  );
+  const client = new PlurkClient(CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET);
+  const hitokoto = await fetch("https://v1.hitokoto.cn").then((res) => res.json());
   const plurk = await client.request("Timeline/plurkAdd", {
-    content: opencc.convertSync(
-      `${hitokoto.hitokoto} [emo76]\n -- ${hitokoto.from}`
-    ),
+    content: opencc.convertSync(`${hitokoto.hitokoto} [emo76]\n -- ${hitokoto.from}`),
     qualifier: ":",
   });
   await client.request("Responses/responseAdd", {
