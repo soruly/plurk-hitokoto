@@ -1,8 +1,7 @@
 # plurk-hitokoto
 
-[![Build Status](https://travis-ci.org/soruly/plurk-hitokoto.svg?branch=master)](https://travis-ci.org/soruly/plurk-hitokoto)
-[![Dependencies](https://david-dm.org/soruly/plurk-hitokoto/status.svg)](https://david-dm.org/soruly/plurk-hitokoto)
-[![license](https://img.shields.io/github/license/soruly/plurk-hitokoto.svg)](https://raw.githubusercontent.com/soruly/plurk-hitokoto/master/LICENSE)
+[![License](https://img.shields.io/github/license/soruly/plurk-hitokoto.svg?style=flat-square)](https://github.com/soruly/plurk-hitokoto/blob/master/LICENSE)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/soruly/plurk-hitokoto/Node.js%20CI?style=flat-square)](https://github.com/soruly/plurk-hitokoto/actions)
 
 Post quotes from [hitokoto (一言)](https://hitokoto.cn) to plurk (噗浪)
 
