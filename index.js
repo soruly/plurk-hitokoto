@@ -30,7 +30,7 @@ if (!TOKEN || !TOKEN_SECRET) {
       fs.readFileSync(".env", "utf8"),
       `TOKEN=${client.token}`,
       `TOKEN_SECRET=${client.tokenSecret}`,
-    ].join("\n")
+    ].join("\n"),
   );
   const me = await client.request("Users/me");
   console.log(`Welcome ${me.display_name}`);
