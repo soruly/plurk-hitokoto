@@ -4,7 +4,6 @@ import readline from "node:readline";
 import crypto from "node:crypto";
 import querystring from "node:querystring";
 import { URL } from "node:url";
-import fetch from "node-fetch";
 import OpenCC from "opencc";
 
 const { CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET } = process.env;
