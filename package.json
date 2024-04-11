@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "opencc": "^1.0.5"
+    "opencc": "^1.1.2"
   },
   "devDependencies": {
     "prettier": "^3.2.5"
