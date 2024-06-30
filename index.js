@@ -1,4 +1,3 @@
-import "dotenv/config.js";
 import fs from "node:fs";
 import readline from "node:readline";
 import crypto from "node:crypto";
@@ -6,6 +5,7 @@ import querystring from "node:querystring";
 import { URL } from "node:url";
 import OpenCC from "opencc";
 
+process.loadEnvFile();
 const { CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET } = process.env;
 
 if (!CONSUMER_KEY || !CONSUMER_SECRET) {
