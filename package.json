@@ -16,10 +16,10 @@
   },
   "author": "soruly",
   "license": "MIT",
-  "dependencies": {
-    "opencc": "https://github.com/BYVoid/OpenCC/archive/refs/tags/ver.1.1.9.tar.gz"
-  },
   "devDependencies": {
     "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "opencc": "github:soruly/OpenCC"
   }
 }
