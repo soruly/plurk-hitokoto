@@ -20,6 +20,6 @@
     "prettier": "^3.3.3"
   },
   "dependencies": {
-    "opencc": "github:soruly/OpenCC"
+    "opencc": "github:BYVoid/OpenCC"
   }
 }
