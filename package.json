@@ -2,13 +2,13 @@
   "name": "plurk-hitokoto",
   "version": "1.0.0",
   "description": "Post quotes from hitokoto to plurk",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
     "prettier": "prettier",
-    "format": "prettier --write \"**/*.js\"",
-    "lint": "prettier --check \"**/*.js\"",
-    "test": "prettier --check \"**/*.js\""
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "prettier --check \"**/*.ts\"",
+    "test": "prettier --check \"**/*.ts\""
   },
   "repository": {
     "type": "git",
