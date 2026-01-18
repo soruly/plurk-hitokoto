@@ -16,6 +16,10 @@
   },
   "author": "soruly",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soruly/plurk-hitokoto/issues"
+  },
+  "homepage": "https://github.com/soruly/plurk-hitokoto#readme",
   "devDependencies": {
     "prettier": "^3.8.0"
   },
