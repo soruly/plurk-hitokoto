@@ -13,7 +13,7 @@ if (!CONSUMER_KEY || !CONSUMER_SECRET) {
   process.exit();
 }
 
-const oAuthFetch = (endpoint, param) => {
+const oAuthFetch = (endpoint: string, param: any) => {
   const timeStamp = Math.ceil(new Date().valueOf() / 1000).toString();
   const nonce = crypto.randomInt(1000000, 9999999).toString();
   const url = new URL(endpoint, "https://www.plurk.com");
@@ -27,12 +27,7 @@ const oAuthFetch = (endpoint, param) => {
         oauth_timestamp: timeStamp,
         oauth_version: "1.0",
       },
-      TOKEN && TOKEN_SECRET
-        ? {
-            oauth_token: TOKEN,
-            oauth_token_secret: TOKEN_SECRET,
-          }
-        : {},
+      TOKEN && TOKEN_SECRET ? { oauth_token: TOKEN, oauth_token_secret: TOKEN_SECRET } : {},
       param,
     ),
   );
@@ -44,7 +39,7 @@ const oAuthFetch = (endpoint, param) => {
       .update(
         [
           "GET",
-          encodeURIComponent(url),
+          encodeURIComponent(url.toString()),
           encodeURIComponent(searchParams.toString().replace(/\+/g, "%20")),
         ].join("&"),
       )
@@ -62,10 +57,7 @@ if (!TOKEN || !TOKEN_SECRET) {
   console.log(
     `Please authorize this app in https://www.plurk.com/OAuth/authorize?oauth_token=${oauth_token}`,
   );
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   const oauth_verifier = await new Promise((resolve) =>
     rl.question("Enter verification code: ", resolve),
   );
@@ -88,10 +80,9 @@ if (!TOKEN || !TOKEN_SECRET) {
       `TOKEN_SECRET=${oauth_token_secret}`,
     ].join("\n"),
   );
-  const me = await oAuthFetch("/APP/Users/me", {
-    oauth_token,
-    oauth_token_secret,
-  }).then((e) => e.json());
+  const me = await oAuthFetch("/APP/Users/me", { oauth_token, oauth_token_secret }).then((e) =>
+    e.json(),
+  );
 
   console.log(`Welcome ${me.display_name}`);
   process.exit();
