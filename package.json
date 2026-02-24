@@ -2,29 +2,29 @@
   "name": "plurk-hitokoto",
   "version": "1.0.0",
   "description": "Post quotes from hitokoto to plurk",
-  "main": "index.ts",
-  "type": "module",
-  "scripts": {
-    "prettier": "prettier",
-    "format": "prettier --write \"**/*.ts\"",
-    "lint": "prettier --check \"**/*.ts\"",
-    "test": "prettier --check \"**/*.ts\""
+  "homepage": "https://github.com/soruly/plurk-hitokoto#readme",
+  "bugs": {
+    "url": "https://github.com/soruly/plurk-hitokoto/issues"
   },
+  "license": "MIT",
+  "author": "soruly",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soruly/plurk-hitokoto.git"
   },
-  "author": "soruly",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/soruly/plurk-hitokoto/issues"
-  },
-  "homepage": "https://github.com/soruly/plurk-hitokoto#readme",
-  "devDependencies": {
-    "prettier": "^3.8.0"
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "oxfmt": "oxfmt",
+    "format": "oxfmt --write \"**/*.*\"",
+    "lint": "oxfmt --check \"**/*.*\"",
+    "test": "oxfmt --check \"**/*.*\""
   },
   "dependencies": {
-    "@types/node": "^25.0.9",
     "opencc": "github:BYVoid/OpenCC"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "oxfmt": "^0.35.0"
   }
 }

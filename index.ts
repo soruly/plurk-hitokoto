@@ -1,8 +1,9 @@
-import fs from "node:fs";
-import readline from "node:readline";
 import crypto from "node:crypto";
+import fs from "node:fs";
 import querystring from "node:querystring";
+import readline from "node:readline";
 import { URL } from "node:url";
+
 import OpenCC from "opencc";
 
 process.loadEnvFile();
