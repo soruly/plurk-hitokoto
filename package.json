@@ -24,7 +24,7 @@
     "opencc": "github:BYVoid/OpenCC"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
+    "@types/node": "^25.9.4",
     "oxfmt": "^0.54.0"
   }
 }
