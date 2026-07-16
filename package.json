@@ -21,7 +21,7 @@
     "test": "oxfmt --check \"**/*.*\""
   },
   "dependencies": {
-    "opencc": "github:BYVoid/OpenCC"
+    "opencc": "^1.4.1"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
