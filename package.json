@@ -24,7 +24,7 @@
     "opencc": "^1.4.1"
   },
   "devDependencies": {
-    "@types/node": "^26.1.1",
+    "@types/node": "^26.1.2",
     "oxfmt": "^0.59.0"
   }
 }
