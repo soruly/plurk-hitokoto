@@ -24,7 +24,10 @@
     "opencc": "^1.4.1"
   },
   "devDependencies": {
-    "@types/node": "^26.1.2",
-    "oxfmt": "^0.61.0"
+    "@types/node": "^26.2.0",
+    "oxfmt": "^0.64.0"
+  },
+  "allowScripts": {
+    "opencc@1.4.1": true
   }
 }
