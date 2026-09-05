@@ -21,13 +21,13 @@
     "test": "oxfmt --check \"**/*.*\""
   },
   "dependencies": {
-    "opencc": "^1.4.1"
+    "opencc": "^1.4.2"
   },
   "devDependencies": {
-    "@types/node": "^26.2.0",
-    "oxfmt": "^0.64.0"
+    "@types/node": "^26.4.1",
+    "oxfmt": "^0.66.0"
   },
   "allowScripts": {
-    "opencc@1.4.1": true
+    "opencc@1.4.2": true
   }
 }
