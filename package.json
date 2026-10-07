@@ -15,6 +15,10 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
+    "auth": "node auth.ts",
+    "start": "node index.ts",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
     "oxfmt": "oxfmt",
     "format": "oxfmt --write \"**/*.*\"",
     "lint": "oxfmt --check \"**/*.*\"",
@@ -22,6 +26,12 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.4",
-    "oxfmt": "^0.72.0"
+    "oxfmt": "^0.72.0",
+    "wrangler": "^4.148.0"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "esbuild@0.28.1": true,
+    "workerd@1.20261006.1": true
   }
 }

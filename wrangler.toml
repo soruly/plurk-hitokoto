@@ -1,0 +1,12 @@
+name = "plurk-hitokoto"
+main = "index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+send_metrics = false
+
+[triggers]
+crons = ["0 12 * * *"] # Every day at 12:00 UTC
+
+[observability]
+enabled = true
