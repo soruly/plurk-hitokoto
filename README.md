@@ -16,7 +16,3 @@ Post quotes from [hitokoto (一言)](https://hitokoto.cn) to plurk (噗浪)
 7. `node index.ts` again
 
 You can setup a cron job to schedule posts
-
-## Caveat
-
-This uses OpenCC to convert Simplified Chinese to Traditional Chinese, which requires `g++`

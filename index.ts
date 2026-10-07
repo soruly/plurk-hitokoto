@@ -4,8 +4,6 @@ import querystring from "node:querystring";
 import readline from "node:readline";
 import { URL } from "node:url";
 
-import OpenCC from "opencc";
-
 process.loadEnvFile();
 const { CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET } = process.env;
 
@@ -89,9 +87,42 @@ if (!TOKEN || !TOKEN_SECRET) {
   process.exit();
 }
 
+const s2t = async (text: string) => {
+  if (!text) return "";
+  const res = await fetch("https://zh.wikipedia.org/w/api.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      action: "parse",
+      text,
+      contentmodel: "wikitext",
+      prop: "text",
+      variant: "zh-tw",
+      format: "json",
+      formatversion: "2",
+    }),
+  }).then((e) => e.json());
+
+  const html = res?.parse?.text ?? text;
+  return html
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0*39;/g, "'")
+    .trim();
+};
+
 const hitokoto = await fetch("https://v1.hitokoto.cn").then((res) => res.json());
+const [quote, from] = await Promise.all([s2t(hitokoto.hitokoto), s2t(hitokoto.from || "")]);
 const plurk = await oAuthFetch("/APP/Timeline/plurkAdd", {
-  content: new OpenCC("s2t.json").convertSync(`${hitokoto.hitokoto} [emo76]\n -- ${hitokoto.from}`),
+  content: `${quote} [emo76]\n -- ${from}`,
   qualifier: ":",
 }).then((e) => e.json());
 console.log(plurk);

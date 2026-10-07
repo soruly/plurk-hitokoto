@@ -20,14 +20,8 @@
     "lint": "oxfmt --check \"**/*.*\"",
     "test": "oxfmt --check \"**/*.*\""
   },
-  "dependencies": {
-    "opencc": "^1.4.2"
-  },
   "devDependencies": {
-    "@types/node": "^26.4.1",
-    "oxfmt": "^0.66.0"
-  },
-  "allowScripts": {
-    "opencc@1.4.2": true
+    "@types/node": "^26.6.4",
+    "oxfmt": "^0.72.0"
   }
 }
