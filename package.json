@@ -25,13 +25,13 @@
     "test": "oxfmt --check \"**/*.*\""
   },
   "devDependencies": {
-    "@types/node": "^26.6.4",
-    "oxfmt": "^0.72.0",
-    "wrangler": "^4.148.0"
+    "@types/node": "^26.6.5",
+    "oxfmt": "^0.73.0",
+    "wrangler": "^4.151.1"
   },
   "allowScripts": {
     "sharp@0.33.5": true,
-    "esbuild@0.28.1": true,
-    "workerd@1.20261006.1": true
+    "esbuild@0.28.2": true,
+    "workerd@1.20261012.1": true
   }
 }
