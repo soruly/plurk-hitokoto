@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/node": "^26.6.4",
     "oxfmt": "^0.72.0",
-    "wrangler": "^4.148.0"
+    "wrangler": "^4.151.1"
   },
   "allowScripts": {
     "sharp@0.33.5": true,
